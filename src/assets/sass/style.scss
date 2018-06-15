@@ -1,0 +1,115 @@
+//Imports
+@import 'reset';
+@import 'mixins';
+@import 'fonts';
+@import 'var';
+
+.content{
+    
+    //Menu
+    .header{
+        height: 80px;
+        width: 100%;
+        @include flexbox();  
+        @include flex-direction(row);
+        position: fixed; 
+        background-color: $bg-default;
+        z-index: 1;
+        box-shadow: 0px 2px 10px -2px rgba(0, 0, 0, 0.19);
+    
+        .menu{
+            width: 100%;
+            margin-left: 2rem;
+            margin-right: 2rem;
+            font-family: $fontPlutoLight;
+            color: $color-primary;
+            font-weight: 100;
+            @include flexbox();  
+            @include flex-direction(row);
+            @include justify-content(space-between);
+            @include align-self(center);
+            
+            .left{
+    
+    
+                .logo{
+                    h1 {
+                        font-family: $fontPlutoBold;
+                        color: $color-segundary;
+                        font-size: 1.8rem;
+                        margin-top: 5px;
+                    }
+                }
+            }
+    
+            .right {
+                width: fit-content;
+                @include flexbox();  
+                @include flex-direction(row);
+    
+                .item {
+                    padding: 10px 20px 10px 20px;
+    
+                    a {
+                        font-size: $font-size-medium;
+                        font-style: none;
+                        text-decoration: none;
+                        text-transform: none;
+                        color: $color-primary;
+                    }
+                }
+            }
+        }
+    }
+
+    //Container
+    .container{
+        padding-top: 80px;
+        
+
+        .main-container{
+            @include flexbox();
+            @include flex-direction(column);
+
+            .menu-sidebar{
+                order: 1;
+                @include flexbox();
+                @include flex-direction(column);
+                position: fixed;
+                width: 300px;
+                padding: 45px 25px 45px 25px;
+                height: 100%;
+                background: $bg-default;
+                border-right: 1px solid #f2f2f2;
+                overflow: auto;
+
+                .title{
+                    font-family: $fontPlutoLight; 
+                    font-size: $font-size-large;
+                    margin-bottom: 13px;
+                    padding-bottom: 3px;
+                    border-bottom: 1px solid #f2f2f2;
+                }
+            }
+
+            .content-container{
+                order: 2;
+                @include flexbox();
+                width: 100%;
+                padding: 45px 25px 45px 25px;
+                height: 100%;
+                overflow: auto;
+                margin-left: 351px;
+
+                h2 {
+                    font-family: $fontPlutoLight;
+                    font-size: $font-size-large;
+                }
+
+            }
+        }
+    }
+}
+
+
+
