@@ -12,7 +12,9 @@ class App extends Component {
         <div className='container'>
           <div className='main-container'>
             <SideBar />
-            <AppRoutes />
+            <div className='content-container'>
+              <AppRoutes />
+            </div>
           </div>
         </div>
       </div>
